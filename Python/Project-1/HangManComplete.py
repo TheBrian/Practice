@@ -63,10 +63,12 @@ def is_word_guessed(secret_word, letters_guessed):
       False otherwise
     '''
     #Check through secret word to see if letter is in word or not.
-    for letter in secret_word:
-        if letter in letters_guessed:
-            return True
-    return False
+    for char in secret_word:
+        if char in letters_guessed:
+            continue
+        else:
+            return False
+    return True
 
 
 
